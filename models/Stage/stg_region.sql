@@ -5,7 +5,7 @@ select
     R_REGIONKEY as regionkey,
     R_NAME as name,
     R_COMMENT as comment
-from SOURCEDB.MK_MALL.REGIONSS
+from SOURCEDB.MK_MALL.REGIONS
 )
 
 select * from region
