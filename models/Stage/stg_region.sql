@@ -1,5 +1,3 @@
-{{ config(materialized='table') }}
-
 with region as (
 select
     R_REGIONKEY as regionkey,
