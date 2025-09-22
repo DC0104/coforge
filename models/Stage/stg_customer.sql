@@ -6,7 +6,7 @@ select
     c_acctbal as account_balance,
     c_mktsegment as market_segment,
     c_comment as c_comment
-from customer
+from SOURCEDB.MK_MALL.CUSTOMERS
 )
 
 select * from customer
