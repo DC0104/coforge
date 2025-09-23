@@ -46,6 +46,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 #       +materialized: table
 #==============================================================
 
+#=============================================================
+# models:
+#   dbt_dhruv:
+#     # Applies to all files under models/example/
+#     Stage:
+#       +materialized: table
+#=============================================================
+
 models:
   dbt_dhruv:
     # Applies to all files under models/example/
