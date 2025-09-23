@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: src
+    database: sourcedb
+    schema: mk_mall
+    tables:
+      - name: customers
+      - name: nations
+      - name: regions
+      - name: suppliers
+
+
+#       - name: suppliers
+#         freshness: 
+#           error_after:
+#             count: 10
+#             period: day
+#           warn_after:
+#             count: 1
+#             period: day
+#         loaded_at_field: updated_time
+
+#         freshness: 
+#           error_after:
+#             count: 10
+#             period: day
+#         loaded_at_query: |
+#           SELECT MAX(updated_time)
+#           FROM (
+#           SELECT * FROM {{ this }}
+#           WHERE update_time > DATEADD(day, -7, CURRENT_DATE)
+#           QUALIFY COUNT(*) OVER (PARTITION BY updated_time::date) > 2000
+#           )
+        
+
+        
