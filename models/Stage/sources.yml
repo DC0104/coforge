@@ -12,10 +12,10 @@ sources:
       - name: suppliers
         freshness: 
           error_after:
-            count: 5
-            period: day
+            count: 120
+            period: minute
           warn_after:
-            count: 1
-            period: day
+            count: 0
+            period: minute
         loaded_at_field: updated_time
         
