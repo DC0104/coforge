@@ -9,3 +9,4 @@ sources:
       - name: customers
       - name: nations
       - name: regions
+      - name: suppliers
