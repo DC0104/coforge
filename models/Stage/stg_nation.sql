@@ -4,7 +4,7 @@ select
     N_NAME as name,
     N_REGIONKEY as regionkey,
     N_COMMENT as comment
-from SOURCEDB.MK_MALL.NATIONS
+from {{ source('src','nations') }}
 )
 
 select * from nation
