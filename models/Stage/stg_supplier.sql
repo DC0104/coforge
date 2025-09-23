@@ -7,7 +7,7 @@ select
     s_phone as phone,
     s_acctbal as acctbal,
     s_comment as comment,
-    updated_time as updated_time
+    updated_time
 from {{ source('src','suppliers') }}
 )
 
