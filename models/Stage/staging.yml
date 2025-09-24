@@ -8,9 +8,9 @@ models:
           - not_null:
               config:
                 store_failures: true
-          # - unique:
-          #     config:
-          #       store_failures: true
+          - unique:
+              config:
+                store_failures: true
           # - not_null
               # config:
               #   store_failures: false
