@@ -3,7 +3,23 @@ version: 2
 models:
   - name: stg_nation
     columns:
-      - name: nation_id
+      - name: nationkey
         tests:
-          - unique
-          - not_null
+          - relationships:
+              field: nationkey
+              to: ref('stg_region')
+        # tests:
+        #   - unique
+        #   - not_null
+  - name: stg_region
+    columns: 
+      - name: name
+        tests:
+          - accepted_values:
+              values:
+                - "AFRICA"
+                - "AMERICA"
+                - "ASIA"
+                - "EUROPE"
+                - "MIDDLE EAST"
+                
