@@ -1,4 +1,4 @@
-with order as (
+with orderdb as (
 select
     o_orderkey as orderkey,
     o_custkey as custkey,
@@ -12,4 +12,4 @@ select
 from {{ source('src','orders') }}
 )
 
-select * from order
+select * from orderdb
