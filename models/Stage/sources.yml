@@ -5,6 +5,7 @@ sources:
     database: sourcedb
     schema: mk_mall
     tables:
+      - name: orders
       - name: nations
       - name: customers
         columns:
@@ -14,7 +15,7 @@ sources:
               - not_null
       - name: regions
       - name: suppliers
-      - name: orders
+
 
 
 #       - name: suppliers
