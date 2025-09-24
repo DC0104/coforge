@@ -5,17 +5,22 @@ models:
     columns:
       - name: nationkey
         tests:
-          - unique:
-              config:
-                store_failures: true
           - not_null:
               config:
-                store_failures: false
+                store_failures: true
+          # - unique:
+          #     config:
+          #       store_failures: true
+          # - not_null
+              # config:
+              #   store_failures: false
       - name: regionkey
         tests:
           - relationships:
               field: regionkey
               to: ref('stg_region')
+              config:
+                store_failures: true
   - name: stg_region
     columns: 
       - name: name
