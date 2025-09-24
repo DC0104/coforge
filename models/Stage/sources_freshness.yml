@@ -10,12 +10,8 @@ sources:
         columns:
           - name: c_custkey
             tests:
-              - unique:
-                  config:
-                    store_failures: true
-              - not_null:
-                  config:
-                    store_failures: false
+              - unique
+              - not_null
       - name: regions
       - name: suppliers
 
