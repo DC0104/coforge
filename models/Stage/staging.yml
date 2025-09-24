@@ -5,12 +5,13 @@ models:
     columns:
       - name: nationkey
         tests:
+          - unique
+          # - not_null
+      - name: regionkey
+        tests:
           - relationships:
-              field: nationkey
+              field: regionkey
               to: ref('stg_region')
-        # tests:
-        #   - unique
-        #   - not_null
   - name: stg_region
     columns: 
       - name: name
