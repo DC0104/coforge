@@ -7,6 +7,15 @@ sources:
     tables:
       - name: customers
       - name: nations
+        columns:
+          - name: c_custkey
+            tests:
+              - unique:
+                  config:
+                    store_failures: true
+              - not_null:
+                  config:
+                    store_failures: false
       - name: regions
       - name: suppliers
 
