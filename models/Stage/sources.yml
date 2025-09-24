@@ -14,6 +14,7 @@ sources:
               - not_null
       - name: regions
       - name: suppliers
+      - name: orders
 
 
 #       - name: suppliers
