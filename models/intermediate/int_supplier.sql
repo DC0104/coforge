@@ -11,7 +11,7 @@ with supplier as(
         comment,
         updated_time
     from {{ref('stg_supplier')}}
-    where updated_time > (select updated_time from {{this}})
+    where updated_time > (select max(updated_time) from {{this}} )
 )
 
 select * from supplier
