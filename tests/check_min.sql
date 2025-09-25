@@ -12,4 +12,4 @@ with orderd as (
 select orderkey,sum(total_price) order_total 
 from orderd
 group by 1
-having (order_total<=1000)
+having (order_total<=800)
