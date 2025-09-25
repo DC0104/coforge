@@ -1,6 +1,6 @@
 with supplier as (
 select
-    s_suppkey as s_suppkey,
+    s_suppkey as suppkey,
     s_name as name,
     s_address as address,
     s_nationkey as nationkey,
