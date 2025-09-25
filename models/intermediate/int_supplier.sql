@@ -1,13 +1,13 @@
 with supplier as(
     select
-    supplier.suppkey,
-    supplier.name,
-    ssupplier.address,
-    supplier.nationkey,
-    supplier.phone,
-    supplier.acctbal,
-    supplier.comment,
-    supplier.updated_time
+        suppkey,
+        name,
+        address,
+        nationkey,
+        phone,
+        acctbal,
+        comment,
+        updated_time
     from {{ref('stg_supplier')}}
 )
 
