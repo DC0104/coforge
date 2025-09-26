@@ -59,3 +59,6 @@ models:
     # Applies to all files under models/example/
     Stage:
       +materialized: table
+    # intermediate:
+    #   +materialized: table
+    #   +transient: false
