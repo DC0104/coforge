@@ -6,3 +6,7 @@
     TO_DECIMAL({{ col_name }} / 100, 16, {{ scale }})
 {% endmacro %}
 
+{% macro mactest()%}
+    do run_query('create table test (id number, name String)')
+{%endmacro%}
+
