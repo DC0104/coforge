@@ -1,4 +1,4 @@
-{{config(materialized='incremental')}}
+{{config(materialized='incremental',unique_key='suppkey')}}
 
 with supplier as(
     select
@@ -11,7 +11,9 @@ with supplier as(
         comment,
         updated_time
     from {{ref('stg_supplier')}}
+    {% if is_incremental() %}
     where updated_time > (select max(updated_time) from {{this}} )
+    {% endif %}
 )
 
 select * from supplier
