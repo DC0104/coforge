@@ -33,6 +33,10 @@ models:
                 - "EUROPE"
                 - "MIDDLE EAST"
                 - "NewRegion"
+      # - name: regionkey
+      #   tests:
+      #     - is_even
+          
 
 
                 
