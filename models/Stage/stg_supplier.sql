@@ -10,7 +10,8 @@ select
     {{cent_to_dollar('s_acctbal')}} as acct_bal,
     s_comment as comment,
     updated_time,
-    '{{mactest()}}' as test
+    '{{mactest1()}}' as test1,
+    '{{mactest2()}}' as test2
 from {{ source('src','suppliers') }}
 )
 
