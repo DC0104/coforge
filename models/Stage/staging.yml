@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_nation        
+  - name: stg_nation
     columns:
       - name: nationkey
         tests:
@@ -17,26 +17,25 @@ models:
       - name: regionkey
         tests:
           - relationships:
-              field: regionkey
-              to: ref('stg_region')
               config:
                 store_failures: true
+              arguments:
+                field: regionkey
+                to: ref('stg_region')
   - name: stg_region
-    columns: 
+    columns:
       - name: name
         tests:
           - accepted_values:
-              values:
-                - "AFRICA"
-                - "AMERICA"
-                - "ASIA"
-                - "EUROPE"
-                - "MIDDLE EAST"
-                - "NewRegion"
+              arguments:
+                values:
+                  - "AFRICA"
+                  - "AMERICA"
+                  - "ASIA"
+                  - "EUROPE"
+                  - "MIDDLE EAST"
+                  - "NewRegion"
       # - name: regionkey
       #   tests:
       #     - is_even
-          
 
-
-                
