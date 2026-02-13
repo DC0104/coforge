@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_nation
+    columns:
+      - name: nationkey
+        tests:
+          - not_null:
+              config:
+                store_failures: true
+          - unique:
+              config:
+                store_failures: true
+          # - not_null
+              # config:
+              #   store_failures: false
+      - name: regionkey
+        tests:
+          - relationships:
+              config:
+                store_failures: true
+              arguments:
+                field: regionkey
+                to: ref('stg_region')
+  - name: stg_region
+    columns:
+      - name: name
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - "AFRICA"
+                  - "AMERICA"
+                  - "ASIA"
+                  - "EUROPE"
+                  - "MIDDLE EAST"
+                  - "NewRegion"
+      # - name: regionkey
+      #   tests:
+      #     - is_even
+

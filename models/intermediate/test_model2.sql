@@ -1,0 +1,1 @@
+do run_query('create table test (id number, name String)')
